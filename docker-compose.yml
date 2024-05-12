@@ -1,0 +1,11 @@
+services:
+  apache-web:
+    build:
+      context: ./ 
+      dockerfile: Dockerfile    
+    restart: 'no'
+    volumes:
+      - ./dist/:/home/projects/app/
+    ports:
+      - 3010:80
+ 
