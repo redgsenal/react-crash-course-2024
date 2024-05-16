@@ -41,7 +41,7 @@ const App = () => {
       <Route path="/" element={<MainLayout />}>
         <Route index element={<HomePage />} />
         <Route path="/jobs" element={<JobsPage />} />
-        <Route path="/add-job" element={<AddJobPage addJobSubmit={addJob} />} />
+        <Route path="/job/add" element={<AddJobPage addJobSubmit={addJob} />} />
         <Route
           path="/jobs/:id"
           element={<JobPage deleteJob={deleteJob} />}
