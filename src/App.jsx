@@ -10,6 +10,7 @@ import JobsPage from "./pages/JobsPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import JobPage, { jobLoader } from "./pages/JobPage";
 import AddJobPage from "./pages/AddJobPage";
+import EditJobPage from "./pages/EditJobPage";
 
 const App = () => {
   const addJob = async (newJob) => {
@@ -31,6 +32,10 @@ const App = () => {
     });
   };
 
+  const editJob = async (id) => {
+    console.log("edit job:", id);
+  };
+
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<MainLayout />}>
@@ -40,6 +45,11 @@ const App = () => {
         <Route
           path="/jobs/:id"
           element={<JobPage deleteJob={deleteJob} />}
+          loader={jobLoader}
+        />
+        <Route
+          path="/job/edit/:id"
+          element={<EditJobPage editJob={editJob} />}
           loader={jobLoader}
         />
         <Route path="*" element={<NotFoundPage />} />
