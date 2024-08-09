@@ -10,3 +10,11 @@ Currently, two official plugins are available:
 # Docker Build
 
 docker compose -f docker-compose.yml up --build -d
+
+# YouTube source
+
+Traversy Media: https://www.youtube.com/watch?v=LDB4uaJ87e0
+
+# run in dev
+
+npm run dev
